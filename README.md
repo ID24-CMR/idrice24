@@ -19,6 +19,7 @@
  ## Architecture Overview
 
  ## Documentation
+  - Life [Demo](https://id24-cmr.github.io/idrice24/)
 
  ## Support-and-feedback
 
