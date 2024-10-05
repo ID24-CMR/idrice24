@@ -1,15 +1,17 @@
 {
   "name": "idrice24",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "deploy": "ng build --output-path docs --base-href /mns/",
-    "deploy-test": "ng lint && ng build --prod --output-path docs --base-href /mns/ && git status && git config --global user.email 'gzeleu@gmx.de' &&  git config --global user.name 'Ghislain' && git add * -f && git commit -m 'UPDATED GITHUB DOCS FOLDER' && git push ",
+    "deploy": "ng build --output-path docs --base-href /idrice24/",
+    "deploy-test": "ng lint && ng build --prod --output-path docs --base-href /idrice24/ && git status && git config --global user.email 'gzeleu@gmx.de' &&  git config --global user.name 'Ghislain' && git add * -f && git commit -m 'UPDATED GITHUB DOCS FOLDER' && git push ",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:idrice24": "node dist/idrice24/server/server.mjs"
+    "clean": "rimraf ./dist",
+    "lint": "ng lint",
+    "lint:fix": "ng lint   --fix"
   },
   "private": true,
   "dependencies": {
