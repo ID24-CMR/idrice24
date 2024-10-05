@@ -1,6 +1,8 @@
  name: Build
  on:
   push:
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
   pull_request:
  jobs:
   build:
@@ -54,4 +56,19 @@
           publish_dir: ./docs # Sources folder to get all html files
           commit_message: ----> ${{github.event.head_commit.message}} <---- # Set custom commit message
           force_orphan: true # allows you to make your publish branch with only the latest commit
-          publish_branch: gh-pages # Default=gh-pages. Set Another GitHub Pages Branch, but we want under foder docs!!        
+          publish_branch: main # Default=gh-pages. Set Another GitHub Pages Branch, but we want under foder docs!!        
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this token is provided by Actions, you dont need to create your oen token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            Changes in this release
+            - First Change
+            - Second Change
+          draft: false
+          prerelease: false      

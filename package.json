@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "deploy2": "ng build --output-path docs --base-href /mns/",
+    "deploy-test": "ng lint && ng build --prod --output-path docs --base-href /mns/ && git status && git config --global user.email 'gzeleu@gmx.de' &&  git config --global user.name 'Ghislain' && git add * -f && git commit -m 'UPDATED GITHUB DOCS FOLDER' && git push ",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:idrice24": "node dist/idrice24/server/server.mjs"
