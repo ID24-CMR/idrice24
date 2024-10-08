@@ -13,13 +13,22 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      // "i18": {
+      //   "sourceLocale": "en-US",
+      //   "locales": {
+      //     "fr": {
+      //       "translation": "src/locale/messages.fr.xlf",
+      //       "baseHref": ""
+      //     }
+      //   }
+      // },
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/idrice24",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+           // "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -28,7 +37,7 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "src/assets"
               }
             ],
             "styles": [

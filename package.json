@@ -9,6 +9,7 @@
     "deploy-test": "ng lint && ng build --prod --output-path docs --base-href /idrice24/ && git status && git config --global user.email 'gzeleu@gmx.de' &&  git config --global user.name 'Ghislain' && git add * -f && git commit -m 'UPDATED GITHUB DOCS FOLDER' && git push ",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test-deploy": "npm run test --  --no-watch --no-progress",
     "clean": "rimraf ./dist",
     "lint": "ng lint",
     "lint:fix": "ng lint   --fix"
