@@ -19,7 +19,7 @@
           "options": {
             "outputPath": "dist/idrice24",
             "outputPath": {
-              "base": "../../docs",
+              "base": "../idrice24/docs",
               "browser": ""
             },
             "index": "src/index.html",
