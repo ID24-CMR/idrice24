@@ -1,9 +1,10 @@
 <div></div>
 <div *ngIf="!loading">
+  <div class="header">
   <app-header></app-header>
-  
-  <div class="container-fluid" [@routeAnimations]="prepareRoute(outlet)">
-    <router-outlet #outlet="outlet">
+</div>
+  <!-- <div class="container-fluid" [@routeAnimations]="prepareRoute(outlet)">
+     <router-outlet #outlet="outlet">
     </router-outlet>
-  </div>
+  </div> -->
 </div>

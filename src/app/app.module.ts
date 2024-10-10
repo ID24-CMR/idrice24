@@ -14,7 +14,7 @@ import { AppRoutes } from './app/app.routes';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [AppComponent],
   imports: [
     CommonModule,
     BrowserModule,
@@ -28,4 +28,13 @@ import { AppRoutes } from './app/app.routes';
   providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+// Diagnostic only: inspect router configuration
+constructor(
+  private router: Router){
+   const replace = (key: any, value: any)=>{
+    console.log(key);
+    return (typeof value == 'function') ? value.name : value;
+  }
+  console.log('Routes: ', JSON.stringify(this.router.config, replace, 2));
+   } }
