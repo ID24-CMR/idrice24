@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './components/header/header.component';
 
@@ -12,10 +13,12 @@ import { HeaderComponent } from './components/header/header.component';
     ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    RouterModule
     ]
 })
 export class SharedModule { }

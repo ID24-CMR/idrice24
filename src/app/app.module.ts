@@ -20,7 +20,7 @@ import { AppRoutes } from './app/app.routes';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule,
+    AppRoutes,
     SharedModule,
     CoreModule,
     ReactiveFormsModule

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { slideInAnimation } from './shared/animations/animation';
+import { timer } from 'rxjs';
+import * AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -11,11 +13,11 @@ import { slideInAnimation } from './shared/animations/animation';
 })
 export class AppComponent {
   title = 'idrice24';
- // loading: boolean;
- // location!: Location;
+  loading: boolean;
+  location!: Location;
 
   ngOnInit(){
-    //timer(2000).subscribe( x => this.loading = false);
+    timer(2000).subscribe( x => this.loading = false);
   }
 
    // this is to detect any change in the project
