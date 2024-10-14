@@ -11,12 +11,17 @@ import { Router } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animation';
 import { AppRoutes } from './app/app.routes';
 
+import { HeaderComponent } from './shared/components/header/header.component';
+
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent],
   imports: [
     CommonModule,
+    HeaderComponent,
     BrowserModule,
     FormsModule,
     HttpClientModule,
@@ -26,7 +31,7 @@ import { AppRoutes } from './app/app.routes';
     ReactiveFormsModule
   ],
   providers: [HttpClientModule],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, HeaderComponent]
 })
 export class AppModule {
 // Diagnostic only: inspect router configuration
