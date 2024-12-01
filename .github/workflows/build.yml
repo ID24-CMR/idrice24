@@ -38,7 +38,8 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }} # Only main branch
         uses: test-room-7/action-update-file@v1
         with:
-          file-path: ./docs
+          github_token: ${{secrets.GITHUB_TOKEN}} # set automatically
+          file-path: /idrice24/docs
           commit-msg: =====>  ${{ github.event.head_commit.message }} <====
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
