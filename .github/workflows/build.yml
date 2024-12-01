@@ -40,7 +40,7 @@ jobs:
           hugo-version: "latest"
 
       - name: Deploy static files (Github page - into docs folder)
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v3.7.0-8
         #  if: ${{ github.ref == 'refs/heads/main' }} # Only main branch
         with:
           github_token: ${{secrets.GITHUB_TOKEN}} # set automatically
