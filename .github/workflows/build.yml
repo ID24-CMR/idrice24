@@ -55,10 +55,10 @@ jobs:
         run: | 
             echo "done!"
 
-      - uses: "ID24-CMR/idrice24"
+      - uses: "ID24-CMR/idrice24@v*"
         with:
             repo_token: "&{{ secrets.GITHUB_TOKEN }}"
-            prerelease: true
+            prerelease: false
             files: |
                 LICENSE.txt
                 *.jar
