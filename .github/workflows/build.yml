@@ -34,16 +34,6 @@ jobs:
           npm i
           npm run deploy
 
-      - name: ===>NOT WORK<=== Update Bundles (/docs directory)
-        if: ${{ github.ref == 'refs/heads/main' }} # Only main branch
-        uses: peaceiris/actions-gh-pages@v3.7.0-8
-        with:
-         
-          file-path: /idrice24/docs
-          commit-msg: =====>  ${{ github.event.head_commit.message }} <====
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
