@@ -1,13 +1,13 @@
 {
   "name": "idrice24",
-  "version": "0.0.0",
+  "version": "v.0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --output-path docs --base-href /idrice24/docs"
+    "deploy": "ng build --output-path docs --base-href ./idrice24/docs"
   },
   "private": true,
   "dependencies": {
