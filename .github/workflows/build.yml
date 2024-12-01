@@ -55,7 +55,7 @@ jobs:
         run: | 
             echo "done!"
 
-      - uses: "marvinpinto/idrice24@latest"
+      - uses: "ID24-CMR/idrice24@latest"
         with:
             repo_token: "&{{ secrets.GITHUB_TOKEN }}"
             prerelease: false
