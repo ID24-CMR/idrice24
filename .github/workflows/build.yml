@@ -51,14 +51,3 @@ jobs:
           force_orphan: true # allows you to make your publish branch with only the latest commit
           publish_branch: gh-pages # Default=gh-pages. Set Another GitHub Pages Branch, but we want under foder docs!!
           
-      - name: "Build $ test"
-        run: | 
-            echo "done!"
-
-      - uses: "ID24-CMR/idrice24@v*"
-        with:
-            repo_token: "&{{ secrets.GITHUB_TOKEN }}"
-            prerelease: false
-            files: |
-                LICENSE.txt
-                *.jar
