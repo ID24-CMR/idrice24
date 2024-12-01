@@ -65,7 +65,7 @@ jobs:
         run: |
               echo "done!"
     
-      - uses: "ID24-CMR/idrice24@0.0.0"
+      - uses: "ID24-CMR/idrice24"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
