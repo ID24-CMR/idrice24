@@ -55,7 +55,7 @@ jobs:
           github_token: ${{secrets.GITHUB_TOKEN}} # set automatically
           keep_files: false # Keeping existing files
           # destination_dir: ./docs # The Folder(from publish_dir ) Where gh-page point his html files
-          publish_dir: /idrice24/docs # Sources folder to get all html files
+          publish_dir: ./docs # Sources folder to get all html files
           commit_message: ----> ${{github.event.head_commit.message}} <---- # Set custom commit message
           force_orphan: true # allows you to make your publish branch with only the latest commit
           publish_branch: gh-pages # Default=gh-pages. Set Another GitHub Pages Branch, but we want under foder docs!!
@@ -65,10 +65,4 @@ jobs:
         run: |
               echo "done!"
     
-      - uses: "ID24-CMR/idrice24"
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          prerelease: false
-          files: |
-                LICENSE.txt
-                *.jar
+      
