@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './core/components/home/home.component';
 
 export const routes: Routes = [
@@ -8,5 +8,8 @@ export const routes: Routes = [
 	},
 	{ path: 'products',
 	  loadChildren: () => import('./product/product.module').then(m =>m.ProductModule)
+	},
+	{ path: 'about-us',
+		loadChildren: () => import('./media/media.module').then(m =>m.MediaModule )
 	}
 	];
