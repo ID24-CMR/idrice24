@@ -8,7 +8,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 @NgModule({
   imports: [ ],
   providers: [],
-  bootstrap: [HeaderComponent]
+  bootstrap: []
 })
 export class AppModule {
 // Diagnostic only: inspect router configuration
