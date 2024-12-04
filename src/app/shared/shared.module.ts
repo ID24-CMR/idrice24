@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, RouterLink, RouterLinkActive } from '@angular/router';
 
+import {MatIconModule} from '@angular/material/icon';
+
 
 
 @NgModule({
@@ -12,12 +14,14 @@ import { RouterModule, RouterLink, RouterLinkActive } from '@angular/router';
     CommonModule,
     RouterModule,
     RouterLink,
-    RouterLinkActive],
+    RouterLinkActive,
+  MatIconModule],
   exports: [
     CommonModule,
     RouterLink,
     RouterLinkActive,
-    RouterModule
+    RouterModule,
+    MatIconModule
     ]
 })
 export class SharedModule { }
